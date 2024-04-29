@@ -13,6 +13,8 @@
 		E0B2AFEE2BDE5D7E00D9F85D /* Base in Resources */ = {isa = PBXBuildFile; fileRef = E0B2AFED2BDE5D7E00D9F85D /* Base */; };
 		E0B2AFF02BDE5D7F00D9F85D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0B2AFEF2BDE5D7F00D9F85D /* Assets.xcassets */; };
 		E0B2AFF32BDE5D7F00D9F85D /* Base in Resources */ = {isa = PBXBuildFile; fileRef = E0B2AFF22BDE5D7F00D9F85D /* Base */; };
+		E0B2AFFC2BDE5DC800D9F85D /* MultiCircularProgressView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0B2AFFB2BDE5DC800D9F85D /* MultiCircularProgressView.xib */; };
+		E0B2AFFE2BDE66B700D9F85D /* MultiCircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B2AFFD2BDE66B700D9F85D /* MultiCircularProgressView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		E0B2AFEF2BDE5D7F00D9F85D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E0B2AFF22BDE5D7F00D9F85D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E0B2AFF42BDE5D7F00D9F85D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E0B2AFFB2BDE5DC800D9F85D /* MultiCircularProgressView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MultiCircularProgressView.xib; sourceTree = "<group>"; };
+		E0B2AFFD2BDE66B700D9F85D /* MultiCircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiCircularProgressView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,7 @@
 		E0B2AFE52BDE5D7E00D9F85D /* Circle with multi color custom view */ = {
 			isa = PBXGroup;
 			children = (
+				E0B2AFFA2BDE5D9100D9F85D /* Custom View */,
 				E0B2AFE62BDE5D7E00D9F85D /* AppDelegate.swift */,
 				E0B2AFE82BDE5D7E00D9F85D /* SceneDelegate.swift */,
 				E0B2AFEA2BDE5D7E00D9F85D /* ViewController.swift */,
@@ -65,6 +70,15 @@
 				E0B2AFF42BDE5D7F00D9F85D /* Info.plist */,
 			);
 			path = "Circle with multi color custom view";
+			sourceTree = "<group>";
+		};
+		E0B2AFFA2BDE5D9100D9F85D /* Custom View */ = {
+			isa = PBXGroup;
+			children = (
+				E0B2AFFB2BDE5DC800D9F85D /* MultiCircularProgressView.xib */,
+				E0B2AFFD2BDE66B700D9F85D /* MultiCircularProgressView.swift */,
+			);
+			path = "Custom View";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,6 +140,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E0B2AFF02BDE5D7F00D9F85D /* Assets.xcassets in Resources */,
+				E0B2AFFC2BDE5DC800D9F85D /* MultiCircularProgressView.xib in Resources */,
 				E0B2AFF32BDE5D7F00D9F85D /* Base in Resources */,
 				E0B2AFEE2BDE5D7E00D9F85D /* Base in Resources */,
 			);
@@ -138,6 +153,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0B2AFFE2BDE66B700D9F85D /* MultiCircularProgressView.swift in Sources */,
 				E0B2AFEB2BDE5D7E00D9F85D /* ViewController.swift in Sources */,
 				E0B2AFE72BDE5D7E00D9F85D /* AppDelegate.swift in Sources */,
 				E0B2AFE92BDE5D7E00D9F85D /* SceneDelegate.swift in Sources */,

@@ -101,7 +101,7 @@ extension MultiCircularProgressView {
     }
     
     func loadNib() {
-        Bundle.main.loadNibNamed("CircleWithMultiColorBorderView", owner: self)
+        Bundle.main.loadNibNamed("MultiCircularProgressView", owner: self)
         addSubview(contentView)
         contentView.frame = bounds
     }
