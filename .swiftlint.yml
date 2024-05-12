@@ -1,0 +1,59 @@
+disabled_rules: # List of rules to ignore completely
+  - identifier_name
+
+opt_in_rules: # Some rules are only opt-in
+  - empty_count
+  - missing_docs
+  - unneeded_parentheses_in_closure_argument
+
+opt_out_rules: # Some rules might be too strict for your project
+  - force_try
+  - force_unwrapping
+
+excluded: # Exclude certain paths or files from linting
+  - Pods
+
+line_length_configuration: # Configuring exceptions to line length rule
+  warning: 160
+  error: 200
+
+reporter: "xcode" # Report format, can be "xcode", "json", "csv", "checkstyle", "html", "emoji"
+
+# Rule configurations
+cyclomatic_complexity:
+  warning: 15
+  error: 25
+
+function_body_length:
+  warning: 40
+  error: 100
+
+file_length:
+  warning: 400
+  error: 600
+
+type_body_length:
+  warning: 300
+  error: 500
+
+indentation: # Set indentation style
+  indentation: "spaces"
+  tab_width: 4
+
+trailing_whitespace: ignore
+
+# Rule-specific configurations
+variable_name:
+  min_length: 2
+  excluded:
+    - id
+    - URL
+
+type_name:
+  excluded:
+    - Circle_with_multi_color_custom_viewTests
+
+excluded:
+  - Carthage
+  - Pods
+  - third-party-library

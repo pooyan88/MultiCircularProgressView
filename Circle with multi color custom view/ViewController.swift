@@ -10,14 +10,14 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var circleView: MultiCircularProgressView!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         let progresses = [
-            MultiCircularProgressView.Config.Progress(total: 60, remain: 45, color: .systemPink),  // internal internet
-            MultiCircularProgressView.Config.Progress(total: 30, remain: 10, color: .systemMint), // normal internet
-            MultiCircularProgressView.Config.Progress(total: 15, remain: 5, color: .orange)  // internal internet
+            MultiCircularProgressView.Config.Progress(total: 60, remain: 45, color: .systemPink),
+            MultiCircularProgressView.Config.Progress(total: 30, remain: 10, color: .systemMint),
+            MultiCircularProgressView.Config.Progress(total: 15, remain: 5, color: .orange)
         ]
         let config = MultiCircularProgressView.Config(progresses: progresses)
         circleView.setup(config: config)
