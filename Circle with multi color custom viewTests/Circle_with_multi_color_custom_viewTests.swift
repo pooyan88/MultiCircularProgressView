@@ -10,9 +10,9 @@ import SnapshotTesting
 @testable import Circle_with_multi_color_custom_view
 
 final class Circle_with_multi_color_custom_viewTests: XCTestCase {
-    
-    var isRecording: Bool = false
-    
+
+    // android lint
+
     func getVC() -> ViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(identifier: "ViewController") as? ViewController
@@ -20,10 +20,10 @@ final class Circle_with_multi_color_custom_viewTests: XCTestCase {
         return vc!
     }
 }
-    
+
 // MARK: - Test Logic
 extension Circle_with_multi_color_custom_viewTests {
-    
+
     private func getDegree(input: Double) -> Double {
         return (input - 90) * .pi / 180.0
     }
@@ -36,12 +36,12 @@ extension Circle_with_multi_color_custom_viewTests {
     private func getRemainPercentage(total: Double, remain: Double) -> Double {
         return (remain / total) * 100
     }
-    
+
     func test_getRemainPercetange() {
         let remainPercentage = getRemainPercentage(total: 100, remain: 45)
         XCTAssertEqual(remainPercentage, 45)
     }
-    
+
     func test_remainPercentageDegree() {
         let remainPercentage = getRemainPercentage(total: 100, remain: 50)
         let degree = (remainPercentage * 360) / 100
@@ -51,10 +51,8 @@ extension Circle_with_multi_color_custom_viewTests {
 
 // MARK: - Test UI
 extension Circle_with_multi_color_custom_viewTests {
-    
+
     func test_snapShotMainView() {
-        assertSnapshots(matching: getVC(), as: [.image], record: isRecording)
+        assertSnapshots(matching: getVC(), as: [.image], record: false)
     }
 }
-
-

@@ -7,14 +7,14 @@
 
 import UIKit
 
-class MultiCircularProgressView:UIView {
+class MultiCircularProgressView: UIView {
 
-    struct Config{
+    struct Config {
 
         struct Progress {
 
-            let total : Double
-            let remain:Double
+            let total: Double
+            let remain: Double
             let color: UIColor
         }
 
@@ -34,7 +34,7 @@ class MultiCircularProgressView:UIView {
         loadNib()
     }
 
-    required init?(coder aDecoder:NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         loadNib()
     }
@@ -43,7 +43,7 @@ class MultiCircularProgressView:UIView {
 // MARK: - Setup Functions
 extension MultiCircularProgressView {
 
-    func setup(config: Config){
+    func setup(config: Config) {
         self.config = config
         let total = config.progresses.compactMap({$0.total}).reduce(0, +)
         setupTopLabel(total: config.progresses.compactMap({$0.total}).reduce(0, +))
@@ -55,7 +55,7 @@ extension MultiCircularProgressView {
         }
         setupBackgroundRing()
     }
-    
+
     private func setupBackgroundRing() {
         let backgroundRingLayer = CAShapeLayer()
         layer.addSublayer(backgroundRingLayer)

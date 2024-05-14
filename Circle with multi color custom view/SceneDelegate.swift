@@ -15,6 +15,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
+
+        if let urlContext = connectionOptions.urlContexts.first {
+            print("scene delegate", urlContext)
+        }
         guard let _ = (scene as? UIWindowScene) else { return }
     }
 
@@ -44,7 +48,26 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Called as the scene transitions from the foreground to the background.
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
+    }    
+    func scene(_ scene: UIScene, willContinueUserActivityWithType userActivityType: String) {
+        print("uncomplete URL 00 ==>", userActivity.debugDescription)
+
+    }
+    
+    func scene(_ scene: UIScene, didFailToContinueUserActivityWithType userActivityType: String, error: any Error) {
+        print("uncomplete URL 000 ==>", userActivity.debugDescription)
+    }
+
+    func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
+        if let url = URLContexts.first?.url {
+            print("scene delegate 2", url)
+        }
+    }
+
+    func scene(_ scene: UIScene, continue userActivity: NSUserActivity) {
+        guard userActivity.activityType == NSUserActivityTypeBrowsingWeb, let urlToOpen = userActivity.webpageURL else { return }
+        // Universal Link iOS 13 & later when app is open
+        print("scene delegate 3", urlToOpen)
     }
 
 }
-

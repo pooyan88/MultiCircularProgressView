@@ -12,6 +12,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+
+        if let url = launchOptions?[.url] as? URL {
+            print("appdelegate ==>", url)
+
+        }
         return true
     }
 
@@ -28,6 +33,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
+    
 
+    func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([any UIUserActivityRestoring]?) -> Void) -> Bool {
+        print("uncomplete URL 1 ==>", userActivity.debugDescription)
+        return true
+    }
+    
+    func application(_ application: UIApplication, didFailToContinueUserActivityWithType userActivityType: String, error: any Error) {
+        print("uncomplete URL 2 ==>", userActivityType)
+    }
+    
+    func application(_ application: UIApplication, willContinueUserActivityWithType userActivityType: String) -> Bool {
+        print("uncomplete URL 3 ==>", userActivityType)
+        return true
+    }
 }
-

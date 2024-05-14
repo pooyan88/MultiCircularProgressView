@@ -69,6 +69,7 @@
 		E0B2AFF42BDE5D7F00D9F85D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E0B2AFFB2BDE5DC800D9F85D /* MultiCircularProgressView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MultiCircularProgressView.xib; sourceTree = "<group>"; };
 		E0B2AFFD2BDE66B700D9F85D /* MultiCircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiCircularProgressView.swift; sourceTree = "<group>"; };
+		E0C98A222BF256AA003062AF /* Circle with multi color custom view.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Circle with multi color custom view.entitlements"; sourceTree = "<group>"; };
 		E0CCA6322BEF54BE00B43665 /* SnapshotTesting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SnapshotTesting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -141,6 +142,7 @@
 		E0B2AFE52BDE5D7E00D9F85D /* Circle with multi color custom view */ = {
 			isa = PBXGroup;
 			children = (
+				E0C98A222BF256AA003062AF /* Circle with multi color custom view.entitlements */,
 				E0B2AFFA2BDE5D9100D9F85D /* Custom View */,
 				E0B2AFE62BDE5D7E00D9F85D /* AppDelegate.swift */,
 				E0B2AFE82BDE5D7E00D9F85D /* SceneDelegate.swift */,
@@ -538,9 +540,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Circle with multi color custom view/Circle with multi color custom view.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = NA979M4P72;
+				DEVELOPMENT_TEAM = 3PML7PK6NM;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Circle with multi color custom view/Info.plist";
@@ -556,6 +560,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "test.Circle-with-multi-color-custom-view";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -567,9 +572,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Circle with multi color custom view/Circle with multi color custom view.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = NA979M4P72;
+				DEVELOPMENT_TEAM = 3PML7PK6NM;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Circle with multi color custom view/Info.plist";
@@ -585,6 +592,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "test.Circle-with-multi-color-custom-view";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

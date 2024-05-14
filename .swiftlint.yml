@@ -1,5 +1,6 @@
 disabled_rules: # List of rules to ignore completely
   - identifier_name
+  - nesting
 
 opt_in_rules: # Some rules are only opt-in
   - empty_count
